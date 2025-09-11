@@ -4,29 +4,39 @@ import Road from '../assets/road2.jpg'
 import {Link} from 'expo-router'
 import Continue from '../assets/continuebtn.jpg'
 
+//themed components
+import ThemedView from '../components/ThemedView'
+import ThemedText from '../components/ThemedText'
+
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
+      <Text style={[styles.title, {color:'green'}, {fontStyle:'poppins'}]}>REPORTIT APP</Text>
         <Image source={Road} style={styles.img}/>
 
 
-      <Text></Text>
-      <Text style={[styles.title, {color:'green'}, {fontStyle:'poppins'}]}>REPORTIT APP</Text>
       <Text style={styles.head}>Get it all here</Text>
-      <Text style={{marginTop: 10, marginBottom: 30}}>The real game begins..</Text>
+
 
       <View>
-        <Text style={styles.card}>Hello here, this is it..a card</Text>
+        <Text style={styles.card}>Welcome. Press to Continue</Text>
       </View>
 
-      <Link href="/about" style={styles.link}>About Page</Link>
+      <Link href='/login' style={styles.link}>
+      {/*ThemedTexts */}
+      <Text>Login Page</Text>
+      </Link>
       {/* <Link><Image source={Continue} style={styles.imgc}/></Link> */}
-      <Link href="/contact" style={styles.link}>Contact Page</Link>
+      <Link href='/register' style={styles.link}>
+      <Text>Signup Page</Text>
+      </Link>
+
+
 
       <View>
         <Text style={styles.card1}>Continue</Text>
       </View>
-    </View>
+    </ThemedView>
   )
 }
 
@@ -36,7 +46,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'rgba(179, 190, 190, 0.33)' 
 
     },
     title: {
@@ -47,6 +58,7 @@ const styles = StyleSheet.create({
     head: {
         fontWeight: 'bold',
         fontStyle: 'italic',
+        padding: 15,
     },
 
     card: {
@@ -81,7 +93,7 @@ const styles = StyleSheet.create({
     },
     link: {
       marginVertical: 10,
-      marginBottomWidth: 1,
+      marginBottomWidth: 2,
     },
 
 })
