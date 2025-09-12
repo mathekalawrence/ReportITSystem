@@ -27,7 +27,7 @@ export default function _Layout(){
         <>
         <StatusBar style="auto" />
         <Stack
-        screenOptions = {{ headerShown: false, animation: "none"}}
+        screenOptions = {{headerShown: false, animation: "none"}}
         />
         </>
     )

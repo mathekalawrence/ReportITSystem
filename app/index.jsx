@@ -22,14 +22,18 @@ const Home = () => {
         <Text style={styles.card}>Welcome. Press to Continue</Text>
       </View>
 
+     <card style={styles.card}>
       <Link href='/login' style={styles.link}>
       {/*ThemedTexts */}
       <Text>Login Page</Text>
       </Link>
+      </card>
       {/* <Link><Image source={Continue} style={styles.imgc}/></Link> */}
+      <card style={styles.card}>
       <Link href='/register' style={styles.link}>
       <Text>Signup Page</Text>
       </Link>
+      </card>
 
 
 
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'top',
         backgroundColor: 'rgba(179, 190, 190, 0.33)' 
 
     },
@@ -66,6 +70,7 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 5,
         boxShadow: '4px 4px rgba(0,0,0,0.1)',
+        margin: 7,
     },
 
     img: {

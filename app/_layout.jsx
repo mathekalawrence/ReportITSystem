@@ -20,6 +20,9 @@ const RootLayout = () => {
             headerTitleAlign: 'center',
         
        }}>
+        <Stack.Screen name="(authentication)" options={{ headerShown: true }} />
+
+
         <Stack.Screen name='index' options={{title: 'Welcome'}} style={styles.title} />
         <Stack.Screen name='about' options={{title: 'About'}} style={styles.title} />
         <Stack.Screen name='contact' options={{title: 'Contact Us', headerShown: true}} style={styles.title}/>
