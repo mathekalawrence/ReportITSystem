@@ -21,6 +21,7 @@ const RootLayout = () => {
         
        }}>
         <Stack.Screen name="(authentication)" options={{ headerShown: true }} />
+         <Stack.Screen name="(dashboard)" options={{ headerShown: true }} />
 
 
         <Stack.Screen name='index' options={{title: 'Welcome'}} style={styles.title} />

@@ -35,7 +35,9 @@ const Home = () => {
       </Link>
       </card>
 
-
+      <Link href='/profile' style={styles.link}>
+      <Text>Profile Page</Text>
+      </Link>
 
       <View>
         <Text style={styles.card1}>Continue</Text>
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
 
     img: {
         marginVertical: 20,
-        height: 200,
+        height: 50,
         width: 300,
 
     },
