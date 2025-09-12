@@ -17,8 +17,8 @@ export const Colors = {
         title: 'rgba(25, 211, 56, 0.27)',
         background: 'rgba(25, 165, 36, 0.6)',
         navBackground: 'rgba(46, 161, 84, 1)',
-        iconColor: 'rgba(129, 106, 155, 0.67)',
-        iconColorFocused: '#669c76ff',
+        iconColor: 'rgba(29, 201, 201, 0.67)',
+        iconColorFocused: '#0daf0dff',
         uiBackground: 'rgba(22, 195, 218, 0.47)',
 
     },
