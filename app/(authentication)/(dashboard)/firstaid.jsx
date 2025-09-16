@@ -4,7 +4,7 @@ import React from 'react'
 const FirstAid = () => {
   return (
     <View>
-      <Text>F</Text>
+      <Text>FirstAid</Text>
     </View>
   )
 }

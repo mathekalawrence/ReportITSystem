@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
 */}
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+//import ThemedView from '../../components/ThemedView'
 
 const More = () => {
   return (
