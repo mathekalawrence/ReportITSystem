@@ -17,4 +17,10 @@ export function UserProvider({ children }) {
  async function logout(){
 
  }
+
+ return(
+    <UserContext.Provider value={{ user, login, register, logout }}>
+
+    </UserContext.Provider>
+ )
 }
