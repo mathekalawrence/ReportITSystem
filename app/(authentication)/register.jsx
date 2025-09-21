@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Pressable, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native'
+//import React from 'react'
+import React, { useActionState, useState } from "react";
 //Themed components
 import { Link } from 'expo-router'
 import { Colors } from '../../constants/Colors'
@@ -10,20 +11,53 @@ import Spacer from '../../components/Spacer'
 
 
 const Register = () => {
+    const [username, setUsername]=useState('')
+    const [email, setEmail]=useState('')
+    const [password, setPassword]=useState('')
+
+
     const handleSubmit = () => {
-        alert('Registration successful!');
+        console.log('Registration successful!', email, password);
         /*setTimeout(() => {
       setVisible(false);
     }, 3000);*/
     }
 
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <ThemedView style={styles.container}>
-
+ 
         <Spacer />
+        
         <Text title={true} style={styles.title}>
             Signup to Your Account
         </Text>
+
+
+        <TextInput 
+                style={{ width: '80%', marginBottom: 20, height:40, padding: 10}}
+                placeholder='Enter Username'
+                //keyboardType="email address"
+                onChangeText={setUsername}
+                value={username}
+                />
+
+        <TextInput 
+                style={{ width: '80%', marginBottom: 20, height:40, padding: 10}}
+                placeholder='Email Address'
+                keyboardType="email address"
+                onChangeText={setEmail}
+                value={email}
+                />
+        
+                <TextInput 
+                style={{ width: '80%', marginBottom: 20, height:40, padding: 10, backgroundColor: ''}}
+                placeholder='Enter Password'
+                //keyboardType="password"
+                onChangeText={setPassword}
+                value={password}
+                secureTextEntry
+                />
 
          <Pressable 
             onPress = {handleSubmit}
@@ -41,6 +75,7 @@ const Register = () => {
         </Link>
 
     </ThemedView>
+    </TouchableWithoutFeedback>
   )
 }
 

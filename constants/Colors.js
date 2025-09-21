@@ -5,8 +5,8 @@ export const Colors = {
 
     dark: {
         text: '#278',
-        title: '#3674',
-        background: '#6789',
+        title: 'hsla(195, 40%, 33%, 0.27)',
+        background: '#e2e2e211',
         navBackground: '#987',
         iconColor: '#789a',
         iconColorFocused: '#fff',
@@ -15,8 +15,8 @@ export const Colors = {
     light: {
         text: 'rgba(134, 141, 29, 1)',
         title: 'rgba(25, 211, 56, 0.27)',
-        background: 'rgba(25, 165, 36, 0.6)',
-        navBackground: 'rgba(46, 161, 84, 1)',
+        background: 'rgba(255, 255, 255, 1)',
+        navBackground: 'rgba(234, 236, 235, 1)',
         iconColor: 'rgba(29, 201, 201, 0.67)',
         iconColorFocused: '#0daf0dff',
         uiBackground: 'rgba(22, 195, 218, 0.47)',

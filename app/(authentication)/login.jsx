@@ -1,16 +1,23 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Pressable, TextInput } from 'react-native'
+import React, { useState } from "react";
+
+//import React from 'react'
 //Themed components
 import { Link } from 'expo-router'
 import { Colors } from '../../constants/Colors'
 import ThemedView from '../../components/ThemedView'
 import ThemedText from '../../components/ThemedText'
 import Spacer from '../../components/Spacer'
+import ThemedTextInput from '../../components/ThemedTextInput'
 
 
 const Login = () => {
+    const [email, setEmail]=useState('')
+    const [password, setPassword]=useState('')
+
+
     const handleSubmit = () => {
-        alert('Login successful!');
+        console.log('Login successful!', email, password);
         /*setTimeout(() => {
       setVisible(false);
     }, 3000);*/
@@ -25,12 +32,33 @@ const Login = () => {
             Login to Your Account
         </Text>
 
-        <Pressable 
+        
+        <Spacer />
+
+        <TextInput 
+        style={{ width: '80%', marginBottom: 20, height:40, padding: 10}}
+        placeholder='Email Address'
+        keyboardType="email address"
+        onChangeText={setEmail}
+        value={email}
+        />
+
+        <TextInput 
+        style={{ width: '80%', marginBottom: 20, height:40, padding: 10, backgroundColor: ''}}
+        placeholder='Enter Password'
+        //keyboardType="password"
+        onChangeText={setPassword}
+        value={password}
+        secureTextEntry
+        />
+
+         <Pressable 
         onPress = {handleSubmit}
         style={({pressed}) => [styles.btn, pressed && styles.pressed] }>
-            <Text style={{ color: '#f2f2f2', fontWeight: 'bold'}}>SignIn</Text>
+        <Text style={{ color: '#f2f2f2', fontWeight: 'bold'}}>SignIn</Text>
 
         </Pressable>
+        
 
 
         <Spacer height={100} />
