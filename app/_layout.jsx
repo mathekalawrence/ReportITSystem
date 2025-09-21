@@ -11,7 +11,7 @@ const RootLayout = () => {
 
 
   return (
-    <>
+    <UserProvider>
     <StatusBar value="auto" />
        <Stack screenOptions={{
             title: 'The Reporter',
@@ -29,7 +29,7 @@ const RootLayout = () => {
         <Stack.Screen name='contact' options={{title: 'Contact Us', headerShown: true}} style={styles.title}/>
 
       </Stack>
-   </>
+   </UserProvider>
   )
 }
 
